@@ -1,0 +1,238 @@
+/* pages/details/details.wxss */
+/* 视频样式 */
+page{
+    position: relative;
+}
+.video-group{
+    width: 100%;
+    height: 405rpx;
+}
+.video-group .video-item{
+    width: 100%;
+    height: 100%;
+}
+.video-info{
+    width: 100%;
+    padding: 18rpx 30rpx 36rpx 30rpx;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ebebeb;
+}
+.video-info .video-list1{
+    display: flex;
+    justify-content: space-between;
+}
+.video-info .video-list1 text{
+    font-size: 25rpx;
+    color: #292d30;
+}
+.video-info .video-list1 image{
+    width: 35rpx;
+    height: 35rpx;
+}
+.video-info .video-list2{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 46rpx;
+}
+.video-info .video-list2 text{
+    font-size: 20.8rpx;
+    color: #656565;
+    flex-grow: 1;
+}
+.video-info .video-list2 .video-item1{
+    margin-right: 18rpx;
+    display: flex;
+    align-items: flex-end;
+}
+.video-info .video-list2 .video-item2{
+    display: flex;
+    align-items: flex-end;
+}
+.video-info .video-list2 .video-item1 image{
+    width: 38rpx;
+    height: 26rpx;
+    margin-right: 6rpx;
+}
+.video-info .video-list2 .video-item2 image{
+    width: 24rpx;
+    height: 26rpx;
+    margin-right: 6rpx;
+}
+
+/* 猜你喜欢样式 */
+.guess{
+    padding: 30rpx 30rpx 0 30rpx;
+}
+.guess text{
+    font-size: 25rpx;
+    height: 140rpx;
+    color: #292d30;
+    font-weight: bold;
+}
+.guess .guess-list{
+    width: 100%;
+    margin-top: 28rpx;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.guess-list .guess-img{
+    width: 224rpx;
+    margin-right: 10rpx;
+}
+.guess-list .guess-img navigator image{
+    display: block;
+    width: 224rpx;
+    height: 140rpx;
+}
+/* 评论样式 */
+.comment{
+    padding: 42rpx 30rpx 0 30rpx;
+    margin-bottom: 30rpx;
+}
+.comment .comment-title{
+    display: block;
+    font-size: 23rpx;
+    margin-bottom: 36rpx;
+}
+.comment .comment-all{
+    display: flex;
+    flex-direction: column;
+}
+.comment .comment-all .comment-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 52rpx;
+}
+.comment-group .comment-head image{
+    width: 74rpx;
+    height: 74rpx;
+    border-radius: 50%;
+}
+.comment-group .comment-conent{
+    width: 590rpx;
+    margin-top: 8rpx;
+}
+.comment-group .comment-conent .comment-name{
+    font-size: 23rpx;
+    display: block;
+}
+.comment-group .comment-conent .comment-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.comment-conent .comment-info .commentLikeNum,.comment-time{
+    display: block;
+    font-size: 20.8rpx;
+    color: #aeaeae;
+    margin-top: 10rpx;
+}
+.comment-conent .comment-info .comment-hand{
+    width: 78rpx;
+    display: flex;
+    align-items: flex-end;
+}
+.comment-conent .comment-info .comment-hand image{
+    width: 24rpx;
+    height: 26rpx;
+    margin-right: 6rpx;
+}
+.comment-conent .comment-word{
+    display: block;
+    width: 570rpx;
+    /* height: 110rpx; */
+    margin-top: 12rpx;
+    font-size: 20.8rpx;
+    color: #312927;
+}
+.comment-conent .comment-show{
+    display: block;
+    font-size: 25rpx;
+    color: #219a65;
+    margin: 16rpx 0 12rpx 0;
+}
+.comment-conent .comment-delete{
+    display: block;
+    font-size: 20rpx;
+    color: #219a65;
+    margin: 16rpx 0 12rpx 0;
+}
+.comment-conent .comment-area-list{
+    /* display: flex;
+    flex-direction: column; */
+    margin-top: 6rpx;
+}
+.comment-conent .comment-area-list .comment-area{
+    float: left;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 10rpx 16rpx 6rpx 16rpx;
+    box-sizing: border-box;
+}
+.comment-area-list .comment-area .comment-item{
+    display: flex;
+    /* justify-content: flex-start;
+    align-items: flex-end; */
+    width: 100%;
+}
+.comment-area .comment-item view{
+    font-size: 20.8rpx;
+    color: #312927;
+    line-height: 25rpx;
+    /* margin-bottom: 18rpx; */
+}
+.comment-area .comment-item view .comment-reply{
+    font-size: 20.8rpx;
+    color: #219a65;
+    margin: 0 4rpx;
+} 
+.comment-area .comment-item .comment-content{
+    font-size: 20.8rpx;
+    color: #312927;
+    margin: 0 0 0 4rpx;
+}
+/* 尾部样式 */
+.edit{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    height: 92rpx;
+    border-top: 1px solid #efefef;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.edit form{
+    width: 100%;
+    height: 60rpx;
+}
+.edit form input{
+    float: left;
+    width: 510rpx;
+    height: 60rpx;
+    border-radius: 27rpx;
+    border: 1px solid #dedede;
+    flex-grow: 1;
+    font-size: 20.8rpx;
+    padding-left: 28rpx;
+}
+.edit form .edit-placeholder{
+    color: #c4c4c4;
+}
+.edit form button{
+    float: left;
+    margin-top: 4rpx;
+    width: 132rpx;
+    height: 56rpx;
+    flex-basis: auto;
+    background-color: #82b0e4;
+    color: #ffffff;
+    line-height: 52rpx;
+    margin-left: 16rpx;
+    font-size: 25rpx;
+}

@@ -1,0 +1,16 @@
+<!--pages/video/video.wxml-->
+<!-- 已登录 -->
+<view class="collection-container">
+    <view class="collection-title">我的视频</view> 
+    <view class='collection-group'>
+      <block wx:for="{{videoList}}" wx:key="index">
+        <view class='collection-list'>
+          <image class='collection-img' src='{{item.headUrl}}' 
+          bindtap="toDetail" data-id='{{item.id}}' data-categoryId='{{item.categoryId}}'></image>
+          <text class='collection-title'>{{item.title}}</text>
+          <view class="collection-time">发布时间：{{item.time}}</view>    
+        </view>
+      </block>
+    </view>                
+</view>
+  

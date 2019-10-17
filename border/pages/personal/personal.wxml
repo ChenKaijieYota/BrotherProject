@@ -1,0 +1,31 @@
+<!--pages/personal/personal.wxml-->
+<view class="personal-container" wx:if="{{isHide}}">
+    <view class="container-item">
+        <text class="head-text">头像</text>
+        <image class="head-img" src="{{userInfo.avatarUrl}}" />      
+    </view>
+    <view class="container-item">
+        <text class="name-text">用户名</text>
+        <text class="container-info">{{userInfo.nickName}}</text>
+          
+    </view>
+    <view class="container-item">
+        <text class="local-text">所在地</text>
+        <text class="container-info">{{userInfo.country}}-{{userInfo.province}}</text>
+    </view> 
+</view>
+<view class="personal-container" wx:else>
+    <view class="container-item">
+        <text class="head-text">头像</text>
+        <image class="head-img" src="../../images/mine-head.png" />      
+    </view>
+    <view class="container-item">
+        <text class="name-text">用户名</text>
+        <text class="container-info">未登录</text>
+          
+    </view>
+    <view class="container-item">
+        <text class="local-text">所在地</text>
+        <text class="container-info">未登录</text>
+    </view> 
+</view>

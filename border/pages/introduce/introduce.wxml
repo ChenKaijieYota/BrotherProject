@@ -1,0 +1,70 @@
+<!--pages/introduce/introduce.wxml-->
+<!-- 顶部图 -->
+<view class="banner">
+    <image src="../../images/photo3.png" />            
+</view>
+<!-- 公司简介 -->
+<view class="brief">
+    <view class="brief-title">
+        <view class="brief-header">——<text class="brief-header-word">公司简介</text>——</view>          
+    </view>
+    <text class="brief-word1">茂名市旭日清秀文化传播有限公司成立于2017年，是一家以视频制作、文化活动策划执行、文化创意产业、广告发布等为主体业务的知名文化公司。</text>
+    <text class="brief-word2">公司下设“央美兄弟视频工作室”，这是由两位毕业于中央美术学院影视专业人士牵头创始的视频制作机构。更专业、更高效、更用心、更周到是“央美兄弟”的定位和追求。</text>
+    <image class="" src="../../images/photo4.png" />              
+</view>
+<!-- 企业理念 -->
+<view class="idea">
+    <view class="idea-title">
+        <view class="idea-header">——<text class="idea-header-word">业务理念</text>——</view>          
+    </view>
+    <view class="idea-main">
+        <view class="idea-list">
+            <image class="idea-img" src="../../images/crown.png" />
+            <view class="idea-item">
+                <text class="idea-item-title">顾客至上  极限服务</text>
+                <text class="idea-item-word">“极限服务”是本公司所首提，是公司核心文化之一。</text>       
+            </view>       
+        </view>
+        <view class="idea-list">
+            <image class="idea-img" src="../../images/diamond.png" />
+            <view class="idea-item">
+                <text class="idea-item-title">重学求质 永无劣品</text>
+                <text class="idea-item-word">我们始终把质量当作生命之本，守住不出低劣产品的基本底线</text>       
+            </view>       
+        </view>
+        <view class="idea-list">
+            <image class="idea-img" src="../../images/love.png" />
+            <view class="idea-item">
+                <text class="idea-item-title">热爱公司 情如兄弟</text>
+                <text class="idea-item-word">我们坚持把培养公司的凝聚力当作走向长远的重要基础</text>       
+            </view>       
+        </view>
+        <view class="idea-list">
+            <image class="idea-img" src="../../images/plane.png" />
+            <view class="idea-item">
+                <text class="idea-item-title">拼搏用心 永葆激情</text>
+                <text class="idea-item-word">“用心，便会不同，激情，证明我们还年轻”</text>       
+            </view>       
+        </view>  
+    </view>
+      
+</view>
+<!-- 旭日东升 -->
+<view class="sun">
+    <text class="sun-word">旭日东升，天地清秀，扶摇直上，鹏程万里！在未来，我们将一如既往，以最真诚的情感，最专业的态度，为社会、为顾客提供更多更优质的文化服务，砥砺前行！</text>
+    <view class="sun-list">
+        <view class="sun-item">
+            <text class="sun-number">256</text>
+            <text class="sun-name">服务客户</text>
+        </view>
+        <view class="sun-item">
+            <text class="sun-number">256</text>
+            <text class="sun-name">服务项目</text>
+        </view> 
+        <view class="sun-item">
+            <text class="sun-number">256</text>
+            <text class="sun-name">公司人数</text>
+        </view>               
+    </view>
+       
+</view>

@@ -1,0 +1,54 @@
+/* pages/comment/comment.wxss */
+.comment-container{
+    width: 100%;
+    padding: 0 0 0 30rpx;
+    box-sizing: border-box;
+}
+.comment-container .comment-title{
+    font-size: 30rpx;
+    color: #000000;
+    width: 100%;
+    height: 88rpx;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 88rpx;
+    margin-bottom: 34rpx;
+    padding-left: 282rpx;
+    box-sizing: border-box;
+}
+.comment-container .comment-list{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 42rpx;
+}
+.comment-container .list-img{
+    width: 246rpx;
+    height: 154rpx; 
+    margin-right: 32rpx;   
+}
+.comment-container .list-img image{
+    width: 100%;
+    height: 100%;
+}
+.comment-container .list-info{
+    width: 306rpx;
+    height: 154rpx;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+.list-info .info-title{
+    font-size: 24rpx;
+    color: #000000;
+}
+.list-info .info-group:last-of-type{
+    margin-top: -8rpx;
+}
+.info-group .info-group-name{
+    font-size: 22rpx;
+    color: #999999;
+}
+.info-group .info-group-number{
+    font-size: 26rpx;
+    color: #ff0000;
+}

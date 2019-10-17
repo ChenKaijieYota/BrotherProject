@@ -1,0 +1,149 @@
+/**index.wxss**/
+/*搜索样式*/
+.search{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 18rpx;
+  margin-bottom: 21rpx;
+}
+.search-navigator{
+  width: 690rpx;
+  height: 60rpx;
+  border-radius: 33rpx;
+}
+.search-navigator input{
+  width: 619rpx;
+  height: 60rpx;
+  background-color: #EBF0F4;
+  border-radius: 33rpx;
+  font-size: 22.8rpx;
+  padding-left: 71rpx;
+  background-image: url('data:image/png;base64,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');
+  background-repeat: no-repeat;
+  background-position: 4% center;
+  background-size: 5%;
+}
+
+/*搜索样式结束*/
+/* 导航栏样式 */
+.nav{
+  width: 100%;
+  font-size: 31.25‬‬rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25rpx;
+}
+.nav .nav-name{
+  width: 90rpx;
+  height: 50rpx;
+  text-align: center;
+  font-size: 31.25rpx;
+}
+.nav .nav-show{
+  color: #379FF6;
+  font-size: 37.5rpx;
+  border-bottom: 2px solid #379FF6;
+}
+/* 导航栏样式结束 */
+/* 轮播样式 */
+.play{
+  width: 720rpx;
+  height: 330rpx;
+  margin: 0 15rpx 0 15rpx;
+}
+.play swiper{
+  width: 100%;
+  height: 100%;
+}
+.play-img{
+  width: 100%;
+  height: 330rpx;
+}
+/* 轮播样式结束 */
+/* 推荐样式 */
+.recommend-title{
+  width: 70%;
+  margin: 25rpx 0 27rpx 30rpx;
+  display: flex;
+  align-items: center;
+}
+.recommend-img{
+  width: 44rpx;
+  height: 44rpx;
+}
+.recommend-word{
+  font-size: 37.5rpx;
+  font-weight: 400;
+  color: #379FF6;
+  margin-left: 7rpx;
+}
+.recommend-list{
+  width: 720rpx;
+  margin: 0 15rpx 0 15rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.recommend-item{
+  width: 350rpx;
+  margin-bottom: 28rpx;
+}
+.recommend-photo{
+  width: 350rpx;
+  height: 214rpx;
+  border-radius:12rpx 12rpx 0px 0px;
+}
+.recommend-name{
+  display: block;
+  width: 344rpx;
+  height: 27rpx;
+  line-height: 27rpx;
+  font-size: 25rpx;
+  color: #292D30;
+  /* 超出一行文字自动隐藏  */
+  overflow: hidden;
+  /* 文字隐藏后添加省略号 */
+  text-overflow: ellipsis;
+  /* 强制不换行 */
+  white-space: nowrap;
+  margin-top: 14rpx;
+}
+.recommend-person{
+  width: 350rpx;
+  height: 35rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12rpx;
+}
+.recommend-author{
+  display: block;
+  font-size: 25rpx;
+  color: #808080;
+  margin-top: -2rpx;
+}
+.recommend-forward{
+  display: block;
+  width: 90rpx;
+  height: 35rpx;
+  padding: 0;
+  margin-right: 0;
+  line-height: 35rpx;
+  background-color: #379FF6;
+  border-radius: 6rpx;
+  color: #ffffff;
+  font-size: 22rpx;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+.recommend-icon{
+  margin-top: 9rpx;
+  width: 20rpx;
+  height: 18rpx;
+}
+/* 推荐样式结束 */

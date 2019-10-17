@@ -1,0 +1,62 @@
+/* pages/search/search.wxss */
+/*搜索样式*/
+.search{
+    width: 100%;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 18rpx;
+    margin-bottom: 21rpx;
+  }
+  input{
+    width: 519rpx;
+    height: 60rpx;
+    background-color: #EBF0F4;
+    border-radius: 33rpx;
+    font-size: 11.4px;
+    padding-left: 71rpx;
+  }
+  .search_img{
+    position: absolute;
+    left: 59rpx;
+    top: 13rpx;
+    width: 34rpx;
+    height: 34rpx;
+  }
+  .search-btn{
+    width: 110rpx;
+    height: 60rpx;
+    font-size: 24rpx;
+    margin-left: 4rpx;
+    line-height: 60rpx;
+    background-color: #379FF6;
+    color: #ffffff;
+  }
+  /*搜索样式结束*/
+/*搜索出现内容*/
+.showContent{
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.showContent .search_content{
+  width: 330rpx;
+  height: 250rpx;
+  margin-bottom: 10rpx;
+}
+.showContent .search_content .search_content_img{
+  width: 330rpx;
+  height: 214rpx;
+}
+.showContent .search_content .search_content_text{
+  display: block;
+  width: 100%;
+  height: 36rpx;
+  line-height: 30rpx;
+  font-size: 24rpx;
+}

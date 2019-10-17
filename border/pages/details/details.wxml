@@ -1,0 +1,99 @@
+<!--pages/details/details.wxml-->
+<!-- 上方视频 -->
+<view class="video-all">
+    <!-- 视频 -->
+    <view class="video-group">
+        <video class="video-item" src="{{playerUrl}}" controls ></video> 
+    </view>
+    <!-- 视频的详情 -->
+    <view class="video-info">
+        <view class="video-list1">
+            <text>{{title}}</text>
+            <view bindtap="collectClick" data-videoId='{{video_id}}' 
+            data-userId='{{user_id}}'>
+                <image wx:if="{{collectTag}}" src="../../images/star.png" />
+                <image wx:else src="../../images/star-select.png" />       
+            </view>                
+        </view>
+        <view class="video-list2">
+            <text>发布时间：{{publishTime}}</text>
+            <view class="video-item1">
+                <image src="../../images/eye.png" />
+                <text>{{watchNum}}</text>                    
+            </view>
+            <view class="video-item2" bindtap="addLikeClick" data-id="{{video_id}}">
+                <image wx:if="{{isLike}}" src="../../images/hand.png" />
+                <image wx:else src="../../images/hand2.png" />
+                <text>{{likeNum}}</text>   
+            </view>       
+        </view>   
+    </view>        
+</view>
+<!-- 猜你喜欢 -->
+<view class="guess">
+    <text>猜你喜欢</text>
+    <view class="guess-list">
+        <view class="guess-img" wx:for="{{guessLikeList}}" wx:key="index">
+            <navigator url="">
+                <image src="{{item.headUrl}}" />      
+            </navigator>
+        </view>
+    </view>         
+</view>
+<!-- 评论 -->
+<view class="comment">
+    <!-- 评论数 -->
+    <text class="comment-title">评论{{commentNum}}</text>
+    <view class="comment-all">
+        <view class="comment-group" wx:for="{{commentUser}}" 
+        wx:for-item="commentItem" wx:key="id">
+            <!-- 评论者的头像 -->
+            <view class="comment-head">
+                <image src="{{commentItem.headUrl}}" /> 
+            </view>
+            <view class="comment-conent">
+                <!-- 评论者的昵称 -->
+                <text class="comment-name">{{commentItem.fromUser}}</text>
+                <view class="comment-info">
+                    <!-- 评论的发布时间 -->
+                    <text class="comment-time">{{commentItem.time}}</text>
+                    <!-- 评论的点赞 --> 
+                    <view class="comment-hand" data-id="{{commentItem.id}}" 
+                    data-clickLike="{{commentItem.clickLike}}" bindtap="commentLikeClick" >
+                        <image wx:if="{{commentItem.clickLike}}" src="../../images/hand.png" />
+                        <image wx:else src="../../images/hand2.png"/>
+                        <view class="commentLikeNum">{{commentItem.likeNum}}</view>    
+                    </view>
+                </view>
+                <!-- 显示评论内容 -->
+                <view class="comment-word" bindtap='replyComment' data-name='{{commentItem.fromUser}}' 
+                data-cid='{{commentItem.userId}}' data-pid='{{commentItem.id}}'>{{commentItem.content}}</view>  
+                <!-- 循环回复列表  -->
+                <view class="comment-area-list">
+                    <block wx:for="{{commentItem.replyInfoList}}" wx:for-item="replyInfoItem" wx:key="pid">
+                        <!-- 判断回复列表的pid是不是跟评论列表的id一致 -->
+                        <view class="comment-area" wx:if="{{replyInfoItem.pid == commentItem.id}}">
+                            <view class="comment-item" data-name='{{replyInfoItem.reply_name}}' 
+                            data-type="2" data-cid='{{replyInfoItem.replyUserId}}' data-pid="{{replyInfoItem.pid}}">                            
+                                <view wx:if="{{replyInfoItem.replyUserId == replyInfoItem.fromUserId}}">{{replyInfoItem.fromUser}}：</view>                 
+                                <view wx:elif="{{replyInfoItem.fromUserId == commentItem.userId}}">{{replyInfoItem.fromUser}}:</view>                             
+                                <view wx:else>{{replyInfoItem.fromUser}}<text class="comment-reply">@</text>{{replyInfoItem.replyUser}}:</view>
+                                <text class="comment-content" bindtap='replyComment' data-name='{{replyInfoItem.fromUser}}' data-cid='{{replyInfoItem.replyUserId}}' data-pid='{{replyInfoItem.pid}}'>{{replyInfoItem.content}}</text> 
+                            </view>
+                        </view> 
+                    </block>    
+                </view> 
+                <!-- 删除评论 -->
+                <view class="comment-delete" wx:if="{{commentItem.userId == user_id}}" bindtap="commentDelete" data-cid="{{commentItem.id}}">删除</view>                 
+            </view>          
+        </view>
+    </view>          
+</view>
+<!-- 编辑发布评论 -->
+<view class="edit">
+    <form>
+        <input type="text" value="{{comment_text}}" placeholder="{{placeholder}}" 
+        focus="{{focus}}" placeholder-class="edit-placeholder" bindblur="onReplyBlur" bindinput='getCommentText' /> 
+        <button bindtap='sendComment' formType="reset">提交</button>  
+    </form>   
+</view>

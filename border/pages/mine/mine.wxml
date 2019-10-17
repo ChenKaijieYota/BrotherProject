@@ -1,0 +1,42 @@
+<!--pages/mine/mine.wxml-->
+<!-- 顶部登录 -->
+<view wx:if="{{isHide}}">
+    <!-- 登录状态 -->
+    <view class="login-group">
+        <navigator url="../personal/personal?isHide={{isHide}}">
+            <image class="login-head" src="{{userInfo.avatarUrl}}" />
+        </navigator>
+        <view class="login-update">{{userInfo.nickName}}</view>
+    </view>
+</view>  
+<view wx:else>  
+    <!-- 未登录状态 -->  
+    <view class="login-group">
+        <navigator url="../personal/personal?isHide={{isHide}}">
+            <image class="login-head" src="../../images/mine-head.png" />
+        </navigator>
+        <button wx:if="{{canIUse}}" class='login-button' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">请点击登录</button>
+        <view class="login-update" wx:else>请升级微信版本</view>  
+    </view> 
+</view>
+  
+<!-- 三角形 -->
+<view class="triangle-group">
+   <view class="triangle"></view>
+</view>
+<!-- 个人列表 -->
+<view class="personal-group">
+    <navigator class="personal-item" url="../video/video?isHide={{isHide}}&user_id={{user_id}}" >
+        <image class="video-img" src="../../images/mine-video.png" />
+        <text class="personal-text">我的视频</text>     
+    </navigator>
+    <navigator class="personal-item" url="../collection/collection?isHide={{isHide}}&user_id={{user_id}}">
+        <image class="satr-img" src="../../images/mine-star.png" />
+        <text class="personal-text">我的收藏</text>     
+    </navigator>
+    <navigator class="personal-item" url="../comment/comment?isHide={{isHide}}&openid={{openid}}&user_id={{user_id}}">
+        <image class="message-img" src="../../images/mine-message.png" />
+        <text class="personal-text">我的评论</text>
+        <text class='message-number {{sum == 0?"hide-number":""}}'>{{'+'+sum}}</text>      
+    </navigator>       
+</view>

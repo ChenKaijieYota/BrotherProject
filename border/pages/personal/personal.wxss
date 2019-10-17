@@ -1,0 +1,32 @@
+/* pages/personal/personal.wxss */
+page{
+    background-color: #fafafa;
+}
+.personal-container{
+    width: 100%;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+.personal-container .container-item{
+    width: 100%;
+    height: 146rpx;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-item .head-text, .name-text, .local-text{
+    font-size: 30rpx;
+    color: #000000;
+}
+.container-item .head-img{
+    width: 74rpx;
+    height: 74rpx;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #379ff6;
+}
+.container-item .container-info{
+    font-size: 30rpx;
+    color: #8b8b8b;
+}

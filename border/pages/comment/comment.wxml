@@ -1,0 +1,24 @@
+<!--pages/comment/comment.wxml--><!--pages/comment/comment.wxml-->
+<view class="comment-container">
+    <view class="comment-title">我的评论</view>
+    <block wx:for="{{commentList}}" wx:key="*this">
+        <view class="comment-list" bindtap='toDetailUrl' data-id='{{item.videoId}}' 
+        data-categoryId='{{item.categoryId}}' data-videoId='{{item.videoId}}'>
+            <view class="list-img">
+                <image class="" src="{{item.headUrl}}" />     
+            </view>
+            <view class="list-info">
+                <text class="info-title">{{item.title}}</text>
+                <view class="info-group">
+                    <text class="info-group-name">您有新评论：</text>
+                    <text class="info-group-number" wx:if="{{openid == item.openId}}">{{item.newCommentNum}}</text>            
+                </view>
+                <view class="info-group">
+                    <text class="info-group-name">您有新回复：</text>
+                    <text class="info-group-number">{{item.newReplyNum}}</text>            
+                </view> 
+            </view>       
+        </view>
+    </block>      
+</view>
+

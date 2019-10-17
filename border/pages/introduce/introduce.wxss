@@ -1,0 +1,137 @@
+/* pages/introduce/introduce.wxss */
+/* 公司简介样式 */
+.banner image{
+    width: 100%;
+    height: 325rpx;
+    display: block;
+}
+/* 业务理念样式 */
+.brief .brief-title{
+    width: 100%;
+    height: 99rpx;
+    border-bottom: 1px solid #e9e9e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.brief .brief-title .brief-header{
+    color: #d8d8d8;
+    font-size: 25rpx;    
+}
+.brief .brief-title .brief-header .brief-header-word{
+    color: #000000;
+    margin: 0 27rpx;
+}
+.brief .brief-word1{
+    display: block;
+    width: 100%;
+    padding: 0 30rpx 0 35rpx;
+    box-sizing: border-box;
+    font-size: 25rpx;
+    line-height: 48rpx;
+    text-indent: 48rpx;
+    letter-spacing: 1rpx;
+    margin-top: 42rpx;
+}
+.brief .brief-word2{
+    display: block;
+    width: 100%;
+    padding: 0 30rpx 0 35rpx;
+    box-sizing: border-box;
+    font-size: 25rpx;
+    line-height: 48rpx;
+    text-indent: 48rpx;
+    letter-spacing: 1rpx;
+    margin-top: 34rpx;
+}
+.brief image{
+    display: block;
+    margin-top: 34rpx;
+    width: 100%;
+    height: 238rpx;
+}
+/* 业务理念样式 */
+.idea .idea-title{
+    width: 100%;
+    height: 99rpx;
+    border-bottom: 1px solid #e9e9e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.idea .idea-title .idea-header{
+    color: #d8d8d8;
+    font-size: 25rpx;    
+}
+.idea .idea-title .idea-header .idea-header-word{
+    color: #000000;
+    margin: 0 27rpx;
+}
+.idea .idea-main{
+    width: 100%;
+    height: 496rpx;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.idea .idea-main .idea-list{
+    width: 100%;
+    display: flex;   
+}
+.idea .idea-main .idea-list .idea-img{
+    display: block;
+    width: 74rpx;
+    height: 66rpx;
+    margin-right: 42rpx;
+}
+.idea .idea-main .idea-list .idea-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.idea .idea-main .idea-list .idea-item .idea-item-title{
+    font-size: 25rpx;
+}
+.idea .idea-main .idea-list .idea-item .idea-item-word{
+    font-size: 20.8rpx;
+    color: #949494;
+}
+/* 旭日东升样式 */
+.sun{
+    border-top: 14rpx solid #fafafa;
+    width: 100%;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+.sun .sun-word{
+    display: block;
+    font-size: 25rpx;
+    letter-spacing: 1rpx;
+    text-indent: 46rpx;
+    line-height: 48rpx;
+    margin-top: 20rpx;
+}
+.sun .sun-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 30rpx 0 38rpx 0;
+}
+.sun .sun-list .sun-item{
+    width: 100rpx;
+    height: 64rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.sun .sun-list .sun-item .sun-number{
+    font-size: 27rpx;
+    color: #ff2929;
+}
+.sun .sun-list .sun-item .sun-name{
+    font-size: 25rpx;
+    color: #4b4b4b;
+}

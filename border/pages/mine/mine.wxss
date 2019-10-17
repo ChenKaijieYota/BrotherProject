@@ -1,0 +1,105 @@
+/* pages/mine/mine.wxss */
+/*顶部登录*/
+page{
+    position: relative;
+    background-color: #f5f5f5;
+}
+.login-group{
+    width: 100%;
+    height: 344rpx;
+    padding-top: 40rpx;
+    background-color: #379ff6;
+}
+.login-group .login-head{
+    display: block;
+    width: 135rpx;
+    height: 135rpx;
+    border-radius: 50%;
+    margin: 0 auto 20rpx auto;
+    background-color: #ffffff;
+}
+.login-group .login-button{
+    font-size: 22rpx;
+    color: #ffffff;
+    background-color: #379ff6;
+    width: 23%;
+    height: 30rpx;
+    line-height: 30rpx;
+}
+.login-group .login-update{
+    color: #ffffff;
+    font-size: 22rpx;
+    width: 160rpx;
+    margin: 0 auto;
+    text-align: center;
+}
+.login-button::after{/*取消按钮边框*/
+    border:none;
+    }
+/*三角形*/
+.triangle-group{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.triangle-group .triangle{
+    height: 0rpx;
+    width: 0rpx;
+    border-top: 375rpx solid #379ff6;
+    border-right: 375rpx solid transparent;
+    border-left: 375rpx solid transparent;
+}
+/*个人列表*/
+.personal-group{
+    position: absolute;
+    width: 630rpx;
+    padding: 0 30rpx;
+    height: 808rpx;
+    background-color: #ffffff;
+    top: 268rpx;
+    left: 30rpx;
+    border-radius: 14rpx;
+    box-shadow:0px 0px 4px 1px #dcdcdc;
+}
+.personal-group .personal-item{
+    width: 100%;
+    height: 104rpx;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.personal-item .video-img{
+    width: 34rpx;
+    height: 38rpx;
+    margin-right: 14rpx;
+}
+.personal-item .satr-img{
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 18rpx;
+}
+.personal-item .message-img{
+    width: 32rpx;
+    height: 30rpx;
+    margin-right: 16rpx;
+}
+.personal-item .personal-text{
+    font-size: 24rpx;
+    color: #3b9ff3;
+}
+.personal-item .message-number{
+    display: block;
+    width: 46rpx;
+    height: 46rpx;
+    line-height: 46rpx;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 24rpx;
+    color: #ffffff;
+    background-color: #ff2c3b;
+    margin-left: 8rpx;
+}
+.personal-item .hide-number{
+    display: none;
+}

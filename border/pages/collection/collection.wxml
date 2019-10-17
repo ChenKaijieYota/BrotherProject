@@ -1,0 +1,15 @@
+<!--pages/collection/collection.wxml-->
+<view class="collection-container">
+    <view class="collection-title">我的收藏</view>
+    <block wx:for="{{collectList}}" wx:key="*this">
+        <navigator class="" url="../details/details?id={{item.videoId}}&categoryId={{item.categoryId}}&user_id={{user_id}}">
+            <view class="list-img">
+                <image class="" src="{{item.headUrl}}" />     
+            </view>
+            <view class="list-info">
+                <text class="info-title">{{item.title}}</text>
+                <view class="info-time">发布时间：{{item.time}}</view>
+            </view>       
+        </navigator>
+    </block>      
+</view>

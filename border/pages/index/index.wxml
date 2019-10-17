@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<!-- 搜索 -->
+<view class='search'>
+  <navigator class="search-navigator" url="../search/search?user_id={{user_id}}">
+    <input type="text" confirm-type='search' placeholder="请输入您的搜索内容" disabled="true" />
+  </navigator>    
+</view>
+
+<!-- 导航栏 -->
+<view class="nav">
+  <text class='nav-name {{current==item.id?"nav-show":""}}' 
+  wx:for="{{categoryList}}" wx:key="id" 
+  data-pot="{{item.id}}" 
+  bindtap="navItemClick">{{item.category}}</text>
+</view>
+  
+<!-- 轮播 -->
+<view class="play">
+  <swiper indicator-dots="true"
+    autoplay="true" interval="5000" duration="300" indicator-color="#ffffff" indicator-active-color="red">
+    <block wx:for="{{bannerList}}" wx:key="bid">
+      <swiper-item>
+        <!-- 点击轮播图片跳转到视频详情页 -->
+        <navigator url='../details/details?id={{item.bid}}&categoryId={{item.categoryId}}&user_id={{user_id}}'>
+          <image src="{{item.picUrl}}" class="slide-image" class="play-img"  />
+        </navigator> 
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 推荐 -->
+<view>
+  <view class="recommend-title">
+    <image class="recommend-img" src="../../images/recommend.png" />
+    <text class="recommend-word">{{categoryItem[0].category}}</text> 
+  </view> 
+  <view class="recommend-list">
+    <!-- 与当前的栏目id相同才显示 -->
+    <view class="recommend-item" wx:if="{{current==item.categoryId}}" 
+    wx:for="{{videoList}}" wx:key="id" >
+      <image class="recommend-photo" src="{{item.headUrl}}" data-id="{{item.id}}" data-categoryId="{{item.categoryId}}"  bindtap="videoClick" />
+      <text class="recommend-name">{{item.title}}</text>
+      <view class="recommend-person">
+        <text class="recommend-author">{{item.author}}</text>
+        <button class="recommend-forward" open-type="share" data-id='{{item.id}}' 
+        data-img='{{item.headUrl}}' data-title='{{item.title}}' data-categoryId='{{item.categoryId}}'>
+          <text>分享</text>
+          <image class="recommend-icon" src="../../images/forward.png" />  
+        </button>
+      </view>    
+    </view>
+  </view>  
+</view>
+

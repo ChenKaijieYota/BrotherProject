@@ -1,0 +1,16 @@
+<!--pages/search/search.wxml-->
+<view class='search'>   
+  <input type="text" confirm-type='search' placeholder="请输入您的搜索内容" placeholder-class="edit-placeholder" bindinput='getSearchText' />
+  <image class="search_img" src="../../images/search.png" bindtap='sendSearch' />
+  <button bindtap='sendSearch' formType="reset" class="search-btn">搜索</button>      
+</view>
+<view class="showContent">
+  <block wx:for="{{search_content}}" wx:key="*this">
+    <navigator class="search_content" url="../details/details?id={{item.post_id}}&categoryId={{item.category_id}}&user_id={{user_id}}">
+      <image class="search_content_img" src="{{item.headUrl}}" />
+      <text class="search_content_text">{{item.title}}</text>    
+    </navigator>
+  </block>
+</view>
+  
+
